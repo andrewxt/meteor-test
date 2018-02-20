@@ -6,7 +6,7 @@ import { Tasks } from '../api/tasks.js';
 
 export default class Task extends Component {
   toggleChecked() {
-    Tasks.update(this.props.task_id, {
+    Tasks.update(this.props.task._id, {
       $set: { checked: !this.props.task.checked },
     });
   }
